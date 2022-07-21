@@ -3,6 +3,22 @@ module.exports = {
   content: ['./index.html', './main.js'],
   theme: {
     extend: {
+      keyframes: {
+        fadein: {
+          '0%': { visibility: 'hidden', opacity: 0 },
+          '1%': { visibility: 'visible', opacity: 0 },
+          to: { visibility: 'visible', opacity: 1 },
+        },
+        fadeout: {
+          '0%': { visibility: 'visible', opacity: 1 },
+          '99%': { visibility: 'visible', opacity: 0 },
+          to: { visibility: 'hidden', opacity: 0 },
+        },
+      },
+      animation: {
+        fadein: 'fadein 0.3s ease-out forwards',
+        fadeout: 'fadeout 0.3s ease-out forwards',
+      },
       colors: {
         primary: '#111111',
         secondary: '#5e5858',

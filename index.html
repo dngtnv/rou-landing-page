@@ -10,75 +10,132 @@
     <link href="https://fonts.googleapis.com/css2?family=Overpass:wght@400;500;700&display=swap" rel="stylesheet" />
   </head>
   <body class="bg-white text-primary">
-    <!-- <div class="container"> -->
-    <nav class="absolute top-0 z-50 w-full">
+    <nav class="absolute top-0 z-30 w-full">
       <div class="w-full container flex justify-between items-center py-9">
         <a href="/"><img class="w-24 h-7" src="./public/images/image-logo.png" alt="rou" /></a>
         <div class="block lg:hidden">
           <button
             id="nav-toggle"
-            class="flex items-center px-3 py-2 border rounded text-gray-500 border-gray-600 hover:text-gray-800 hover:border-teal-500 appearance-none focus:outline-none"
+            class="flex items-center px-3 py-2 z-40 relative border rounded text-gray-500 border-accent hover:text-gray-800 hover:border-fuchsia-700 appearance-none focus:outline-none"
           >
             <svg class="fill-current h-3 w-3" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
               <title>Menu</title>
               <path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z"></path>
             </svg>
           </button>
+          <div>
+            <!--Hamburger menu-->
+            <div id="popover-overlay" class="fixed invisible inset-0 bg-fuchsia-100/50" aria-hidden="true"></div>
+            <div
+              id="popover-panel"
+              class="max-w-[90%] sm:max-w-xl md:max-w-3xl m-auto absolute invisible inset-x-0 top-full mt-4 flex flex-col rounded-2xl bg-white p-4 text-lg tracking-tight text-slate-900 shadow-xl ring-1 ring-slate-900/5 scale-100"
+            >
+              <ul class="text-[22px] flex flex-col items-center">
+                <li class="w-full text-center"><a class="block" href="#">Home</a></li>
+                <li class="w-full text-center"><a class="block" href="#">About</a></li>
+                <li class="w-full text-center"><a class="block" href="#">Service</a></li>
+                <li class="w-full text-center"><a class="block" href="#">Works</a></li>
+                <li class="w-full text-center"><a class="block" href="#">News</a></li>
+                <li class="w-full text-center"><a class="block" href="#">Contact</a></li>
+              </ul>
+              <hr class="m-2 border-slate-300/40" />
+              <ul class="flex items-center justify-center gap-5 m-3">
+                <li>
+                  <a href="#"
+                    ><svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="18" height="18" viewBox="0 0 30 30" style="fill: #3b5998">
+                      <title>Facebook</title>
+                      <path
+                        d="M12,27V15H8v-4h4V8.852C12,4.785,13.981,3,17.361,3c1.619,0,2.475,0.12,2.88,0.175V7h-2.305C16.501,7,16,7.757,16,9.291V11 h4.205l-0.571,4H16v12H12z"
+                      ></path></svg
+                  ></a>
+                </li>
+                <li>
+                  <a href="#"
+                    ><svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="18" height="18" viewBox="0 0 48 48" style="fill: #000000">
+                      <title>Twitter</title>
+                      <path
+                        fill="#03A9F4"
+                        d="M42,12.429c-1.323,0.586-2.746,0.977-4.247,1.162c1.526-0.906,2.7-2.351,3.251-4.058c-1.428,0.837-3.01,1.452-4.693,1.776C34.967,9.884,33.05,9,30.926,9c-4.08,0-7.387,3.278-7.387,7.32c0,0.572,0.067,1.129,0.193,1.67c-6.138-0.308-11.582-3.226-15.224-7.654c-0.64,1.082-1,2.349-1,3.686c0,2.541,1.301,4.778,3.285,6.096c-1.211-0.037-2.351-0.374-3.349-0.914c0,0.022,0,0.055,0,0.086c0,3.551,2.547,6.508,5.923,7.181c-0.617,0.169-1.269,0.263-1.941,0.263c-0.477,0-0.942-0.054-1.392-0.135c0.94,2.902,3.667,5.023,6.898,5.086c-2.528,1.96-5.712,3.134-9.174,3.134c-0.598,0-1.183-0.034-1.761-0.104C9.268,36.786,13.152,38,17.321,38c13.585,0,21.017-11.156,21.017-20.834c0-0.317-0.01-0.633-0.025-0.945C39.763,15.197,41.013,13.905,42,12.429"
+                      ></path></svg
+                  ></a>
+                </li>
+                <li>
+                  <a href="#"
+                    ><svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="18" height="18" viewBox="0 0 48 48" style="fill: #000000">
+                      <title>Youtube</title>
+                      <path
+                        fill="#FF3D00"
+                        d="M43.2,33.9c-0.4,2.1-2.1,3.7-4.2,4c-3.3,0.5-8.8,1.1-15,1.1c-6.1,0-11.6-0.6-15-1.1c-2.1-0.3-3.8-1.9-4.2-4C4.4,31.6,4,28.2,4,24c0-4.2,0.4-7.6,0.8-9.9c0.4-2.1,2.1-3.7,4.2-4C12.3,9.6,17.8,9,24,9c6.2,0,11.6,0.6,15,1.1c2.1,0.3,3.8,1.9,4.2,4c0.4,2.3,0.9,5.7,0.9,9.9C44,28.2,43.6,31.6,43.2,33.9z"
+                      ></path>
+                      <path fill="#FFF" d="M20 31L20 17 32 24z"></path></svg
+                  ></a>
+                </li>
+                <li>
+                  <a href="#"
+                    ><svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="18" height="18" viewBox="0 0 24 24" style="fill: #df6053">
+                      <title>Instagram</title>
+                      <path
+                        d="M 8 3 C 5.243 3 3 5.243 3 8 L 3 16 C 3 18.757 5.243 21 8 21 L 16 21 C 18.757 21 21 18.757 21 16 L 21 8 C 21 5.243 18.757 3 16 3 L 8 3 z M 8 5 L 16 5 C 17.654 5 19 6.346 19 8 L 19 16 C 19 17.654 17.654 19 16 19 L 8 19 C 6.346 19 5 17.654 5 16 L 5 8 C 5 6.346 6.346 5 8 5 z M 17 6 A 1 1 0 0 0 16 7 A 1 1 0 0 0 17 8 A 1 1 0 0 0 18 7 A 1 1 0 0 0 17 6 z M 12 7 C 9.243 7 7 9.243 7 12 C 7 14.757 9.243 17 12 17 C 14.757 17 17 14.757 17 12 C 17 9.243 14.757 7 12 7 z M 12 9 C 13.654 9 15 10.346 15 12 C 15 13.654 13.654 15 12 15 C 10.346 15 9 13.654 9 12 C 9 10.346 10.346 9 12 9 z"
+                      ></path></svg
+                  ></a>
+                </li>
+              </ul>
+            </div>
+          </div>
         </div>
-        <div
-          class="w-full flex-grow justify-end lg:flex lg:items-center lg:w-auto mt-2 lg:mt-0 lg:bg-transparent text-black p-4 lg:p-0 z-20 hidden bg-gray-100"
-        >
+        <div class="w-full flex-row items-center text-base font-medium justify-end hidden lg:flex">
           <li class="list-none flex flex-row gap-6">
             <ul>
               <a
-                class="relative hover:after:scale-100 after:content-[''] after:absolute after:scale-0 after:left-0 after:bottom-0 after:w-full after:h-0.5 after:transition after:ease-out after:duration-300 after:bg-primary"
+                class="relative hover:after:scale-100 after:content-[''] after:absolute after:scale-0 after:left-0 after:bottom-0 after:w-full after:h-0.5 after:ease-out after:duration-300 after:bg-primary"
                 href="#"
                 >Home</a
               >
             </ul>
             <ul>
               <a
-                class="relative hover:after:scale-100 after:content-[''] after:absolute after:scale-0 after:left-0 after:bottom-0 after:w-full after:h-0.5 after:transition after:ease-out after:duration-300 after:bg-primary"
+                class="relative hover:after:scale-100 after:content-[''] after:absolute after:scale-0 after:left-0 after:bottom-0 after:w-full after:h-0.5 after:ease-out after:duration-300 after:bg-primary"
                 href="#"
                 >About</a
               >
             </ul>
             <ul>
               <a
-                class="relative hover:after:scale-100 after:content-[''] after:absolute after:scale-0 after:left-0 after:bottom-0 after:w-full after:h-0.5 after:transition after:ease-out after:duration-300 after:bg-primary"
+                class="relative hover:after:scale-100 after:content-[''] after:absolute after:scale-0 after:left-0 after:bottom-0 after:w-full after:h-0.5 after:ease-out after:duration-300 after:bg-primary"
                 href="#"
                 >Service</a
               >
             </ul>
             <ul>
               <a
-                class="relative hover:after:scale-100 after:content-[''] after:absolute after:scale-0 after:left-0 after:bottom-0 after:w-full after:h-0.5 after:transition after:ease-out after:duration-300 after:bg-primary"
+                class="relative hover:after:scale-100 after:content-[''] after:absolute after:scale-0 after:left-0 after:bottom-0 after:w-full after:h-0.5 after:ease-out after:duration-300 after:bg-primary"
                 href="#"
                 >Works</a
               >
             </ul>
             <ul>
               <a
-                class="relative hover:after:scale-100 after:content-[''] after:absolute after:scale-0 after:left-0 after:bottom-0 after:w-full after:h-0.5 after:transition after:ease-out after:duration-300 after:bg-primary"
+                class="relative hover:after:scale-100 after:content-[''] after:absolute after:scale-0 after:left-0 after:bottom-0 after:w-full after:h-0.5 after:ease-out after:duration-300 after:bg-primary"
                 href="#"
                 >News</a
               >
             </ul>
             <ul>
               <a
-                class="relative hover:after:scale-100 after:content-[''] after:absolute after:scale-0 after:left-0 after:bottom-0 after:w-full after:h-0.5 after:transition after:ease-out after:duration-300 after:bg-primary"
+                class="relative hover:after:scale-100 after:content-[''] after:absolute after:scale-0 after:left-0 after:bottom-0 after:w-full after:h-0.5 after:ease-out after:duration-300 after:bg-primary"
                 href="#"
                 >Contact</a
               >
             </ul>
           </li>
-          <a class="mx-6 px-7 py-2 text-sm font-bold border-2 rounded-md border-accent hover:bg-fuchsia-400 transition ease-out duration-300" href="#"
+          <a class="mx-6 px-7 py-2 text-sm font-bold border-2 rounded-md border-accent hover:bg-fuchsia-400 ease-out duration-300" href="#"
             >Get A Quote</a
           >
           <li class="list-none flex flex-row gap-3">
             <ul>
               <a href="#">
                 <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="18" height="18" viewBox="0 0 30 30" style="fill: #3b5998">
+                  <title>Facebook</title>
                   <path
                     d="M12,27V15H8v-4h4V8.852C12,4.785,13.981,3,17.361,3c1.619,0,2.475,0.12,2.88,0.175V7h-2.305C16.501,7,16,7.757,16,9.291V11 h4.205l-0.571,4H16v12H12z"
                   ></path>
@@ -88,6 +145,7 @@
             <ul>
               <a href="#"
                 ><svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="18" height="18" viewBox="0 0 48 48" style="fill: #000000">
+                  <title>Twitter</title>
                   <path
                     fill="#03A9F4"
                     d="M42,12.429c-1.323,0.586-2.746,0.977-4.247,1.162c1.526-0.906,2.7-2.351,3.251-4.058c-1.428,0.837-3.01,1.452-4.693,1.776C34.967,9.884,33.05,9,30.926,9c-4.08,0-7.387,3.278-7.387,7.32c0,0.572,0.067,1.129,0.193,1.67c-6.138-0.308-11.582-3.226-15.224-7.654c-0.64,1.082-1,2.349-1,3.686c0,2.541,1.301,4.778,3.285,6.096c-1.211-0.037-2.351-0.374-3.349-0.914c0,0.022,0,0.055,0,0.086c0,3.551,2.547,6.508,5.923,7.181c-0.617,0.169-1.269,0.263-1.941,0.263c-0.477,0-0.942-0.054-1.392-0.135c0.94,2.902,3.667,5.023,6.898,5.086c-2.528,1.96-5.712,3.134-9.174,3.134c-0.598,0-1.183-0.034-1.761-0.104C9.268,36.786,13.152,38,17.321,38c13.585,0,21.017-11.156,21.017-20.834c0-0.317-0.01-0.633-0.025-0.945C39.763,15.197,41.013,13.905,42,12.429"
@@ -97,6 +155,7 @@
             <ul>
               <a href="#">
                 <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="18" height="18" viewBox="0 0 48 48" style="fill: #000000">
+                  <title>Youtube</title>
                   <path
                     fill="#FF3D00"
                     d="M43.2,33.9c-0.4,2.1-2.1,3.7-4.2,4c-3.3,0.5-8.8,1.1-15,1.1c-6.1,0-11.6-0.6-15-1.1c-2.1-0.3-3.8-1.9-4.2-4C4.4,31.6,4,28.2,4,24c0-4.2,0.4-7.6,0.8-9.9c0.4-2.1,2.1-3.7,4.2-4C12.3,9.6,17.8,9,24,9c6.2,0,11.6,0.6,15,1.1c2.1,0.3,3.8,1.9,4.2,4c0.4,2.3,0.9,5.7,0.9,9.9C44,28.2,43.6,31.6,43.2,33.9z"
@@ -108,6 +167,7 @@
             <ul>
               <a href="#">
                 <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="18" height="18" viewBox="0 0 24 24" style="fill: #df6053">
+                  <title>Instagram</title>
                   <path
                     d="M 8 3 C 5.243 3 3 5.243 3 8 L 3 16 C 3 18.757 5.243 21 8 21 L 16 21 C 18.757 21 21 18.757 21 16 L 21 8 C 21 5.243 18.757 3 16 3 L 8 3 z M 8 5 L 16 5 C 17.654 5 19 6.346 19 8 L 19 16 C 19 17.654 17.654 19 16 19 L 8 19 C 6.346 19 5 17.654 5 16 L 5 8 C 5 6.346 6.346 5 8 5 z M 17 6 A 1 1 0 0 0 16 7 A 1 1 0 0 0 17 8 A 1 1 0 0 0 18 7 A 1 1 0 0 0 17 6 z M 12 7 C 9.243 7 7 9.243 7 12 C 7 14.757 9.243 17 12 17 C 14.757 17 17 14.757 17 12 C 17 9.243 14.757 7 12 7 z M 12 9 C 13.654 9 15 10.346 15 12 C 15 13.654 13.654 15 12 15 C 10.346 15 9 13.654 9 12 C 9 10.346 10.346 9 12 9 z"
                   ></path>
@@ -126,7 +186,7 @@
           <p class="text-secondary font-medium text-lg">
             Sub-hero message, not too long and not too short. Pore et dolora magna aliqua. Ut enim ad minim veniam
           </p>
-          <a class="text-lg text-white font-medium px-11 py-4 bg-accent rounded-md hover:bg-fuchsia-400 transition ease-out duration-300" href="#"
+          <a class="text-lg text-white font-medium px-11 py-4 bg-accent rounded-md hover:bg-fuchsia-400 ease-out duration-300" href="#"
             >Get Started</a
           >
         </div>
@@ -141,7 +201,6 @@
         </div>
       </div>
     </header>
-    <!-- </div> -->
     <script type="module" src="/main.js"></script>
   </body>
 </html>
