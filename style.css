@@ -1,3 +1,12 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer components {
+  .h2-primary {
+    @apply text-2xl font-bold text-primary;
+  }
+  .btn-primary {
+    @apply text-white font-medium bg-accent rounded-md hover:bg-fuchsia-400 ease-out duration-300;
+  }
+}

@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
     <title>Rou landing page</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -16,7 +17,9 @@
         <div class="block lg:hidden">
           <button
             id="nav-toggle"
-            class="flex items-center px-3 py-2 z-40 relative border rounded text-gray-500 border-accent hover:text-gray-800 hover:border-fuchsia-700 appearance-none focus:outline-none"
+            class="flex items-center px-3 py-2 z-40 relative border rounded text-gray-500 border-accent hover:text-gray-800 hover:bg-fuchsia-400 ease-out duration-300 outline-none appearance-none focus:outline-none"
+            aria-controls="popover-panel"
+            aria-expanded="false"
           >
             <svg class="fill-current h-3 w-3" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
               <title>Menu</title>
@@ -25,10 +28,10 @@
           </button>
           <div>
             <!--Hamburger menu-->
-            <div id="popover-overlay" class="fixed invisible inset-0 bg-fuchsia-100/50" aria-hidden="true"></div>
+            <div id="popover-overlay" class="fixed hidden inset-0 bg-fuchsia-100/50" aria-hidden="true"></div>
             <div
               id="popover-panel"
-              class="max-w-[90%] sm:max-w-xl md:max-w-3xl m-auto absolute invisible inset-x-0 top-full mt-4 flex flex-col rounded-2xl bg-white p-4 text-lg tracking-tight text-slate-900 shadow-xl ring-1 ring-slate-900/5 scale-100"
+              class="open:flex open:animate-fadein max-w-[90%] sm:max-w-xl md:max-w-3xl m-auto absolute hidden inset-x-0 top-full mt-4 flex-col rounded-2xl bg-white p-4 text-lg tracking-tight text-slate-900 shadow-xl ring-1 ring-slate-900/5 scale-100"
             >
               <ul class="text-[22px] flex flex-col items-center">
                 <li class="w-full text-center"><a class="block" href="#">Home</a></li>
@@ -179,16 +182,14 @@
       </div>
     </nav>
     <header class="relative bg-[url('public/images/image-background-hero.jpg')] bg-no-repeat bg-center bg-cover">
-      <div class="container flex flex-col md:flex-row items-center py-32 xl:py-48 sm:flex-col">
+      <div class="container flex flex-col md:flex-row items-center py-32 xl:pt-48 xl:pb-24 sm:flex-col">
         <!--Left Col-->
         <div class="flex flex-col w-full justify-center items-center md:items-start text-center md:text-left my-10 gap-6 lg:gap-10">
           <h1 class="text-7xl font-bold">Work Smartly with Endless Possibility</h1>
           <p class="text-secondary font-medium text-lg">
             Sub-hero message, not too long and not too short. Pore et dolora magna aliqua. Ut enim ad minim veniam
           </p>
-          <a class="text-lg text-white font-medium px-11 py-4 bg-accent rounded-md hover:bg-fuchsia-400 ease-out duration-300" href="#"
-            >Get Started</a
-          >
+          <a class="btn-primary text-lg px-11 py-4" href="#">Get Started</a>
         </div>
         <!--Right Col-->
         <div class="md:w-11/12 text-center -order-1 md:order-2">
@@ -201,6 +202,46 @@
         </div>
       </div>
     </header>
+    <section class="container">
+      <div class="grid justify-center justify-items-center pt-36">
+        <p class="text-accent font-bold text-sm tracking-wide mb-7">BUILD TRUST FIRST</p>
+        <h2 class="h2-primary w-2/3 md:w-[620px] text-center mb-[60px]">Control your business with a single tap</h2>
+        <div class="flex flex-col w-3/4 sm:w-2/3 md:w-full md:flex-row gap-6 mb-36">
+          <div class="flex flex-col justify-center items-center gap-5 px-[40px] py-[60px] border-4 rounded-lg border-light-pink">
+            <img class="w-[60px]" src="./public/images/icon-anchor.png" alt="anchor" />
+            <h3 class="text-base font-bold text-center w-36 text-primary">Complete business Control</h3>
+            <p class="text-sm text-center text-secondary">Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima adipisci at.</p>
+          </div>
+          <div class="flex flex-col justify-center items-center gap-5 px-[40px] py-[60px] border-4 rounded-lg border-light-green">
+            <img class="w-[60px]" src="./public/images/icon-archive.png" alt="archive" />
+            <h3 class="text-base font-bold text-center w-36 text-primary">Critical analytics and report</h3>
+            <p class="text-sm text-center text-secondary">Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima adipisci at.</p>
+          </div>
+          <div class="flex flex-col justify-center items-center gap-5 px-[40px] py-[60px] border-4 rounded-lg border-light-orange">
+            <img class="w-[60px]" src="./public/images/icon-user.png" alt="user" />
+            <h3 class="text-base font-bold text-center w-36 text-primary">User satisfaction guarranted</h3>
+            <p class="text-sm text-center text-secondary">Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima adipisci at.</p>
+          </div>
+        </div>
+        <div class="flex flex-row">
+          <!--Left Col-->
+          <div class="flex flex-col w-2/3 justify-center items-center md:items-start md:text-left my-10 gap-5 lg:gap-7 mr-36">
+            <h2 class="h2-primary">Most innovative create team</h2>
+            <p class="text-sm">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Temporibus est iusto voluptate quod.</p>
+            <p class="text-xs">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic deserunt commodi consectetur animi nesciunt modi debitis officia,
+              architecto corrupti nobis quasi mollitia! Aliquid porro consectetur quos velit obcaecati esse hic vitae voluptate.
+            </p>
+            <a href="#" class="btn-primary py-4 px-9">KNOW MORE</a>
+          </div>
+          <div class="flex flex-row w-4/5">
+            <div class="relative"><img src="./public/images/image-creative-section-1.jpg" class="absolute" aria-hidden="true" alt /></div>
+            <div class="relative"><img src="./public/images/image-creative-section-2.jpg" class="absolute" aria-hidden="true" alt /></div>
+          </div>
+          <!--Right Col-->
+        </div>
+      </div>
+    </section>
     <script type="module" src="/main.js"></script>
   </body>
 </html>

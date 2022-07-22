@@ -1,29 +1,31 @@
-import './style.css'
-
 const toggleBtn = document.querySelector('#nav-toggle')
 const overlay = document.querySelector('#popover-overlay')
 const panel = document.querySelector('#popover-panel')
 
 let isActive = false
 
+const showOverlay = () => {
+  overlay.classList.remove('hidden')
+  overlay.classList.add('block')
+}
+const hideOverlay = () => {
+  overlay.classList.remove('block')
+  overlay.classList.add('hidden')
+}
+
 toggleBtn.addEventListener('click', () => {
-  isActive = !isActive
-  if (isActive) {
-    overlay.classList.remove('animate-fadeout')
-    panel.classList.remove('animate-fadeout')
-    overlay.classList.add('animate-fadein')
-    panel.classList.add('animate-fadein')
+  if (panel.hasAttribute('open')) {
+    toggleBtn.setAttribute('aria-explanded', false)
+    panel.toggleAttribute('open')
+    hideOverlay()
   } else {
-    overlay.classList.remove('animate-fadein')
-    panel.classList.remove('animate-fadein')
-    overlay.classList.add('animate-fadeout')
-    panel.classList.add('animate-fadeout')
+    toggleBtn.setAttribute('aria-explanded', true)
+    panel.toggleAttribute('open')
+    showOverlay()
   }
 })
 overlay.addEventListener('click', () => {
-  isActive = !isActive
-  overlay.classList.remove('animate-fadein')
-  panel.classList.remove('animate-fadein')
-  overlay.classList.add('animate-fadeout')
-  panel.classList.add('animate-fadeout')
+  toggleBtn.setAttribute('aria-explanded', false)
+  panel.toggleAttribute('open')
+  hideOverlay()
 })

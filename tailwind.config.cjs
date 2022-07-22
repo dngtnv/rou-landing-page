@@ -9,11 +9,6 @@ module.exports = {
           '1%': { visibility: 'visible', opacity: 0 },
           to: { visibility: 'visible', opacity: 1 },
         },
-        fadeout: {
-          '0%': { visibility: 'visible', opacity: 1 },
-          '99%': { visibility: 'visible', opacity: 0 },
-          to: { visibility: 'hidden', opacity: 0 },
-        },
       },
       animation: {
         fadein: 'fadein 0.3s ease-out forwards',
@@ -25,7 +20,7 @@ module.exports = {
         accent: '#c04ae2',
         light: {
           pink: '#fcd7df',
-          green: '#fcd7df',
+          green: '#c9f3e2',
           orange: '#f2d5ba',
         },
         bright: {
