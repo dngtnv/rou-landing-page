@@ -13,7 +13,7 @@
   <body class="bg-white text-primary">
     <nav class="absolute top-0 z-30 w-full">
       <div class="w-full container flex justify-between items-center py-9">
-        <a href="/"><img class="w-24 h-7" src="./public/images/image-logo.png" alt="rou" /></a>
+        <a href="/"><img class="w-24 h-7" src="./images/image-logo.png" alt="rou" /></a>
         <div class="block lg:hidden">
           <button
             id="nav-toggle"
@@ -181,7 +181,7 @@
         </div>
       </div>
     </nav>
-    <header class="relative bg-[url('public/images/image-background-hero.jpg')] bg-no-repeat bg-center bg-cover">
+    <header class="relative bg-[url('/images/image-background-hero.jpg')] bg-no-repeat bg-center bg-cover">
       <div class="container flex flex-col md:flex-row items-center py-32 xl:pt-48 xl:pb-24 sm:flex-col">
         <!--Left Col-->
         <div class="flex flex-col w-full justify-center items-center md:items-start text-center md:text-left my-10 gap-6 lg:gap-10">
@@ -195,7 +195,7 @@
         <div class="md:w-11/12 text-center -order-1 md:order-2">
           <img
             class="object-cover md:absolute sm:static md:w-5/12 sm:w-full right-16 md:top-60 lg:top-52"
-            src="./public/images/image-hero.png"
+            src="./images/image-hero.png"
             alt="illustrator"
             aria-hidden="true"
           />
@@ -204,39 +204,51 @@
     </header>
     <section class="container">
       <div class="grid justify-center justify-items-center pt-36">
-        <p class="text-accent font-bold text-sm tracking-wide mb-7">BUILD TRUST FIRST</p>
-        <h2 class="h2-primary w-2/3 md:w-[620px] text-center mb-[60px]">Control your business with a single tap</h2>
+        <p class="text-accent font-bold text-base tracking-wide mb-7">BUILD TRUST FIRST</p>
+        <h2 class="h2-primary w-4/5 md:w-[620px] text-center mb-[60px]">Control your business with a single tap</h2>
         <div class="flex flex-col w-3/4 sm:w-2/3 md:w-full md:flex-row gap-6 mb-36">
           <div class="flex flex-col justify-center items-center gap-5 px-[40px] py-[60px] border-4 rounded-lg border-light-pink">
-            <img class="w-[60px]" src="./public/images/icon-anchor.png" alt="anchor" />
+            <img class="w-[60px]" src="./images/icon-anchor.png" alt="anchor" />
             <h3 class="text-base font-bold text-center w-36 text-primary">Complete business Control</h3>
-            <p class="text-sm text-center text-secondary">Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima adipisci at.</p>
+            <p class="text-base text-center text-secondary">Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima adipisci at.</p>
           </div>
           <div class="flex flex-col justify-center items-center gap-5 px-[40px] py-[60px] border-4 rounded-lg border-light-green">
-            <img class="w-[60px]" src="./public/images/icon-archive.png" alt="archive" />
+            <img class="w-[60px]" src="./images/icon-archive.png" alt="archive" />
             <h3 class="text-base font-bold text-center w-36 text-primary">Critical analytics and report</h3>
-            <p class="text-sm text-center text-secondary">Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima adipisci at.</p>
+            <p class="text-base text-center text-secondary">Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima adipisci at.</p>
           </div>
           <div class="flex flex-col justify-center items-center gap-5 px-[40px] py-[60px] border-4 rounded-lg border-light-orange">
-            <img class="w-[60px]" src="./public/images/icon-user.png" alt="user" />
+            <img class="w-[60px]" src="./images/icon-user.png" alt="user" />
             <h3 class="text-base font-bold text-center w-36 text-primary">User satisfaction guarranted</h3>
-            <p class="text-sm text-center text-secondary">Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima adipisci at.</p>
+            <p class="text-base text-center text-secondary">Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima adipisci at.</p>
           </div>
         </div>
-        <div class="flex flex-row">
+        <div class="flex flex-col md:flex-row sm:gap-[70px] md:gap-0 items-center md:items-start">
           <!--Left Col-->
-          <div class="flex flex-col w-2/3 justify-center items-center md:items-start md:text-left my-10 gap-5 lg:gap-7 mr-36">
+          <div class="flex flex-col w-5/6 md:w-2/3 text-center justify-center items-center md:items-start md:text-left gap-5 lg:gap-7 lg:mr-10">
             <h2 class="h2-primary">Most innovative create team</h2>
-            <p class="text-sm">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Temporibus est iusto voluptate quod.</p>
-            <p class="text-xs">
+            <p class="text-base text-secondary">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Temporibus est iusto voluptate quod.</p>
+            <p class="text-sm text-secondary">
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic deserunt commodi consectetur animi nesciunt modi debitis officia,
               architecto corrupti nobis quasi mollitia! Aliquid porro consectetur quos velit obcaecati esse hic vitae voluptate.
             </p>
             <a href="#" class="btn-primary py-4 px-9">KNOW MORE</a>
           </div>
-          <div class="flex flex-row w-4/5">
-            <div class="relative"><img src="./public/images/image-creative-section-1.jpg" class="absolute" aria-hidden="true" alt /></div>
-            <div class="relative"><img src="./public/images/image-creative-section-2.jpg" class="absolute" aria-hidden="true" alt /></div>
+          <div class="w-full md:w-11/12">
+            <div
+              class="absolute w-3/4 md:w-[42.222%] h-2/5 md:h-3/5 md:pb-10 left-[50%] -translate-x-2/4 md:translate-x-0 md:right-16 grid grid-flow-row items-center grid-cols-11 grid-rows-4"
+            >
+              <div
+                class="relative w-full col-span-4 col-start-1 col-end-7 row-start-1 row-end-4 aspect-square rounded-xl image-shape-right overflow-hidden"
+              >
+                <img src="./images/image-creative-section-1.jpg" class="absolute w-full h-full object-cover object-center" aria-hidden="true" alt />
+              </div>
+              <div
+                class="relative w-full col-span-4 col-start-6 col-end-12 row-start-2 row-end-5 aspect-square rounded-xl image-shape-left overflow-hidden"
+              >
+                <img src="./images/image-creative-section-2.jpg" class="absolute w-full h-full object-cover object-left" aria-hidden="true" alt />
+              </div>
+            </div>
           </div>
           <!--Right Col-->
         </div>
