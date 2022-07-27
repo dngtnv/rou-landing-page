@@ -46,7 +46,7 @@ module.exports = {
         sm: ['clamp(0.83rem, calc(0.82rem + 0.07vw), 0.89rem)', '1.4'],
         base: ['clamp(1.00rem, calc(0.00rem + 0.00vw), 1.00rem)', '1.5'],
         lg: ['clamp(1.25rem, calc(1.1rem + 0.61vw), 1.15rem);', '1.4'],
-        xl: ['clamp(1.42rem, calc(1.06rem + 1.80vw), 2.34rem)', '1.4'],
+        xl: ['clamp(1.42rem, calc(1.06rem + 1.80vw), 2.34rem)', '1.2'],
         '2xl': ['clamp(1.60rem, calc(1.08rem + 2.59vw), 2.93rem)', '1.2'],
         '3xl': ['clamp(1.80rem, calc(1.08rem + 3.63vw), 3.66rem)', '1.1'],
         '4xl': ['clamp(2.03rem, calc(1.03rem + 4.98vw), 4.58rem)', '1'],
