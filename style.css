@@ -15,4 +15,37 @@
   .image-shape-left {
     clip-path: polygon(20% 0, 100% 0, 100% 100%, 0% 100%);
   }
+  .perspective-e13 {
+    perspective: 132px;
+    perspective-origin: 24% 100%;
+  }
+  .transform-child-e13 {
+    transform: translateX(0.7rem) translateY(2.25rem) rotateY(-7deg) rotateX(-1deg) rotate3d(2, 4, 1, 3deg);
+  }
+  .perspective-e2 {
+    perspective: 132px;
+    perspective-origin: 7% 82%;
+  }
+  .transform-child-e2 {
+    transform: translateX(-1.25rem) translateY(1.5rem) rotate(-4deg) rotate3d(1, 1, 2, 4deg);
+  }
+  .perspective-br {
+    perspective: 132px;
+    perspective-origin: 80% 40%;
+  }
+  .perspective-ck {
+    perspective: 200px;
+    perspective-origin: 0% 40%;
+  }
+  .perspective-jp {
+    perspective: 200px;
+    perspective-origin: 50% 40%;
+  }
+  .perspective-jtp {
+    perspective: 132px;
+    perspective-origin: 0% 40%;
+  }
+  .rotate-4 {
+    transform: rotateX(4deg);
+  }
 }

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html class="scroll-smooth" lang="en">
   <head>
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
@@ -325,12 +325,12 @@
         </div>
         <div class="grid items-center grid-cols-1 gap-3 gap-y-[68px]">
           <div class="flex flex-col md:flex-row items-center gap-28">
-            <div class="relative flex-none w-1/2 md:w-[337px] aspect-square rounded-lg border-4 border-light-pink">
-              <div class="relative w-full h-full overflow-hidden rounded-lg translate-x-5 translate-y-9">
+            <div class="relative flex-none w-1/2 md:w-[337px] aspect-square rounded-lg border-4 border-light-pink perspective-e13">
+              <div class="relative w-full h-full overflow-hidden rounded-lg transform-child-e13">
                 <img class="absolute object-cover left-0 right-0 bottom-0" src="./images/image-ourprojects-1.jpg" alt="" />
               </div>
             </div>
-            <div class="flex flex-col items-center md:items-start w-2/3 md:w-full">
+            <div class="flex flex-col items-center md:items-start w-4/5 md:w-full">
               <p class="text-base font-bold text-bright-pink mb-2">Development</p>
               <h3 class="text-xl font-bold text-primary text-center md:text-start">Jodi kokhono vul hoye jay tumi oporadh nio na</h3>
               <p class="text-base text-secondary md:text-start text-center mt-[20px] mb-[38px]">
@@ -345,12 +345,12 @@
             </div>
           </div>
           <div class="flex flex-col md:flex-row items-center gap-28">
-            <div class="md:order-1 relative flex-none w-1/2 md:w-[337px] aspect-square rounded-lg border-4 border-light-green">
-              <div class="relative w-full h-full overflow-hidden rounded-lg -translate-x-5 translate-y-10">
+            <div class="md:order-1 relative flex-none w-1/2 md:w-[337px] aspect-square rounded-lg border-4 border-light-green perspective-e2">
+              <div class="relative w-full h-full overflow-hidden rounded-lg transform-child-e2">
                 <img class="absolute object-cover bottom-0" src="./images/image-ourprojects-2.jpg" alt="" />
               </div>
             </div>
-            <div class="flex flex-col items-center md:items-start w-2/3 md:w-full">
+            <div class="flex flex-col items-center md:items-start w-4/5 md:w-full">
               <p class="text-base font-bold text-bright-green mb-2">Research & Analytics</p>
               <h3 class="text-xl font-bold text-primary text-center md:text-start">Ei biristi veja rate tuminei bole somoy amar katena</h3>
               <p class="text-base text-secondary md:text-start text-center mt-[20px] mb-[38px]">
@@ -365,12 +365,12 @@
             </div>
           </div>
           <div class="flex flex-col md:flex-row items-center gap-28">
-            <div class="relative flex-none w-1/2 md:w-[337px] aspect-square rounded-lg border-4 border-light-orange">
-              <div class="relative w-full h-full overflow-hidden rounded-lg translate-x-5 translate-y-9">
+            <div class="relative flex-none w-1/2 md:w-[337px] aspect-square rounded-lg border-4 border-light-orange perspective-e13">
+              <div class="relative w-full h-full overflow-hidden rounded-lg transform-child-e13">
                 <img class="absolute object-cover inset-0" src="./images/image-ourprojects-3.jpg" alt="" />
               </div>
             </div>
-            <div class="flex flex-col items-center md:items-start w-2/3 md:w-full">
+            <div class="flex flex-col items-center md:items-start w-4/5 md:w-full">
               <p class="text-base font-bold text-bright-orange mb-2">UI/UX Engineering</p>
               <h3 class="text-xl font-bold text-primary text-center md:text-start">Ami jare chaire se thake mori ontore</h3>
               <p class="text-base text-secondary md:text-start text-center mt-[20px] mb-[38px]">
@@ -392,6 +392,60 @@
         </div>
       </section>
     </div>
+    <section class="container py-20 md:py-40">
+      <div class="flex flex-col items-center">
+        <p class="text-accent font-bold text-base tracking-widest mb-7">MEET OUR TEEM</p>
+        <h2 class="h2-primary w-4/5 md:w-[620px] text-center mb-[85px]">Awesome people with great business skills</h2>
+      </div>
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-5 justify-items-center md:justify-items-stretch">
+        <div class="flex flex-col md:perspective-br">
+          <div class="relative h-32 w-32 md:h-[250px] md:w-full overflow-hidden rounded-lg md:rotate-4">
+            <img class="absolute w-full h-full object-cover" src="/images/image-ourteam-1.jpg" alt="Bruce Wayne" loading="lazy" />
+          </div>
+          <div class="mt-2 md:mt-8">
+            <div class="text-base font-bold">Bruce Wayne</div>
+            <div class="mt-1 text-sm text-slate-400">Founder & CEO</div>
+          </div>
+        </div>
+        <div class="flex flex-col md:perspective-ck md:translate-y-11">
+          <div class="relative h-32 w-32 md:h-[250px] md:w-full overflow-hidden rounded-lg md:rotate-4">
+            <img class="absolute w-full h-full object-cover object-[40%]" src="/images/image-ourteam-2.jpg" alt="Clark Kent" loading="lazy" />
+          </div>
+          <div class="mt-2 md:mt-8">
+            <div class="text-base font-bold">Clark Kent</div>
+            <div class="mt-1 text-sm text-slate-400">Manager</div>
+          </div>
+        </div>
+        <div class="flex flex-col md:perspective-jp">
+          <div class="relative h-32 w-32 md:h-[250px] md:w-full overflow-hidden rounded-lg md:rotate-4">
+            <img
+              class="absolute w-full h-full object-cover object-[10%] md:object-[20%]"
+              src="/images/image-ourteam-3.jpg"
+              alt="Jessica Parker"
+              loading="lazy"
+            />
+          </div>
+          <div class="mt-2 md:mt-8">
+            <div class="text-base font-bold">Jessica Parker</div>
+            <div class="mt-1 text-sm text-slate-400">Developer</div>
+          </div>
+        </div>
+        <div class="flex flex-col md:perspective-jtp md:translate-y-11">
+          <div class="relative h-32 w-32 md:h-[250px] md:w-full overflow-hidden rounded-lg md:rotate-4">
+            <img
+              class="absolute w-full h-full object-cover object-[0%] md:object-[10%]"
+              src="/images/image-ourteam-4.jpg"
+              alt="Justin Pakerman"
+              loading="lazy"
+            />
+          </div>
+          <div class="mt-2 md:mt-8">
+            <div class="text-base font-bold">Justin Pakerman</div>
+            <div class="mt-1 text-sm text-slate-400">Designer</div>
+          </div>
+        </div>
+      </div>
+    </section>
     <script type="module" src="/main.js"></script>
   </body>
 </html>
