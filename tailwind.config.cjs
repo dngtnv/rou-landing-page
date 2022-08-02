@@ -43,7 +43,7 @@ module.exports = {
         sans: ['Overpass', 'sans-serif'],
       },
       fontSize: {
-        sm: ['clamp(0.83rem, calc(0.82rem + 0.07vw), 0.89rem)', '1.4'],
+        sm: ['clamp(0.83rem, calc(0.82rem + 0.07vw), 0.89rem)', '1.5'],
         base: ['clamp(1.00rem, calc(0.00rem + 0.00vw), 1.00rem)', '1.5'],
         lg: ['clamp(1.25rem, calc(1.1rem + 0.61vw), 1.15rem);', '1.4'],
         md: ['clamp(1.35rem, calc(1.06rem + 1.00vw), 2.00rem)', '1.2'],
@@ -53,7 +53,7 @@ module.exports = {
         '4xl': ['clamp(2.03rem, calc(1.03rem + 4.98vw), 4.58rem)', '1'],
         '5xl': ['clamp(2.28rem, calc(0.94rem + 6.71vw), 5.72rem)', '1'],
         '6xl': ['clamp(2.57rem, calc(0.78rem + 8.95vw), 7.15rem)', '1'],
-        '7xl': ['clamp(3.27rem, calc(2.92rem + 1.73vw), 4.58rem)', '1'],
+        '7xl': ['clamp(3.27rem, calc(2.92rem + 1.73vw), 4.56rem)', '1.15'],
       },
     },
   },
