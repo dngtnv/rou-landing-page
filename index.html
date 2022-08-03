@@ -473,21 +473,51 @@
               id="quotes"
             >
               <p class="text-accent font-bold text-base tracking-widest mb-6">TESTIMONIAL</p>
-              <h2 class="h2-primary mb-8">They are awesome!</h2>
-              <blockquote>
-                <p class="text-base text-secondary inline-block w-96">
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam laborum eligendi vitae. Quae blanditiis ipsum nam, nemo id cumque
-                  facilis.
-                </p>
-              </blockquote>
-              <div class="flex flex-row mt-8 items-center">
-                <span class="w-[14px] h-[1.6px] bg-[#332e98]"></span><span class="test-base font-bold mx-4">Kabir Manja</span
-                ><span class="text-sm text-slate-400">Music Producer</span>
-              </div>
+              <ul id="slides" class="relative list-none">
+                <li class="relative w-full float-left -mr-[100%] list-item">
+                  <h2 class="h2-primary mb-8">They are awesome!</h2>
+                  <blockquote>
+                    <p class="text-base text-secondary inline-block w-96">
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam laborum eligendi vitae. Quae blanditiis ipsum nam, nemo id cumque
+                      facilis.
+                    </p>
+                  </blockquote>
+                  <div class="flex flex-row mt-8 items-center">
+                    <span class="w-[14px] h-[1.6px] bg-[#332e98]"></span><span class="test-base font-bold mx-4">Kabir Manja</span
+                    ><span class="text-sm text-slate-400">Music Producer</span>
+                  </div>
+                </li>
+                <li class="relative w-full float-left -mr-[100%] hidden">
+                  <h2 class="h2-primary mb-8">Excellent work!</h2>
+                  <blockquote>
+                    <p class="text-base text-secondary inline-block w-96">
+                      Rerum nihil at mollitia perferendis, repudiandae hic incidunt. Totam laborum eligendi vitae. Quae blanditiis ipsum nam, nemo id
+                      cumque facilis.
+                    </p>
+                  </blockquote>
+                  <div class="flex flex-row mt-8 items-center">
+                    <span class="w-[14px] h-[1.6px] bg-[#332e98]"></span><span class="test-base font-bold mx-4">Harry Styles</span
+                    ><span class="text-sm text-slate-400">Artist</span>
+                  </div>
+                </li>
+                <li class="relative w-full float-left -mr-[100%] hidden">
+                  <h2 class="h2-primary mb-8">Say no more!</h2>
+                  <blockquote>
+                    <p class="text-base text-secondary inline-block w-96">
+                      Totam laborum eligendi vitae. Quae blanditiis ipsum nam, nemo id cumque facilis. Lorem ipsum dolor sit amet consectetur
+                      adipisicing elit.
+                    </p>
+                  </blockquote>
+                  <div class="flex flex-row mt-8 items-center">
+                    <span class="w-[14px] h-[1.6px] bg-[#332e98]"></span><span class="test-base font-bold mx-4">Robo Cop</span
+                    ><span class="text-sm text-slate-400">Police Officer</span>
+                  </div>
+                </li>
+              </ul>
               <div class="flex flex-row h-[9.6px] gap-2 mt-[43px]">
-                <span class="active w-6 h-full rounded bg-accent cursor-pointer"></span>
-                <span class="w-[9.6px] h-full rounded-[50%] bg-accent cursor-pointer"></span
-                ><span class="w-[9.6px] h-full rounded-[50%] bg-accent cursor-pointer"></span>
+                <span id="indicator" class="indicator-active h-full bg-accent ease-out duration-300 cursor-pointer"></span>
+                <span id="indicator" class="indicator h-full bg-accent ease-out duration-300 cursor-pointer"></span
+                ><span id="indicator" class="indicator h-full bg-accent ease-out duration-300 cursor-pointer"></span>
               </div>
             </div>
             <div class="relative w-9/12 h-[300px] md:w-96 md:h-[487px] rounded-lg overflow-hidden testimonial-shape">
@@ -729,11 +759,11 @@
             <div class="mb-11">
               <div class="text-lg text-primary font-bold mb-8">About</div>
               <ul class="list-none">
-                <li class="text-base text-secondary mt-[10px]"><a href="javascript:void(0)">About Us</a></li>
-                <li class="text-base text-secondary mt-[10px]"><a href="javascript:void(0)">Service</a></li>
-                <li class="text-base text-secondary mt-[10px]"><a href="javascript:void(0)">Our Story</a></li>
-                <li class="text-base text-secondary mt-[10px]"><a href="javascript:void(0)">Success</a></li>
-                <li class="text-base text-secondary mt-[10px]"><a href="javascript:void(0)">Support</a></li>
+                <li class="text-base text-secondary mt-[10px] hover:text-slate-400"><a href="javascript:void(0)">About Us</a></li>
+                <li class="text-base text-secondary mt-[10px] hover:text-slate-400"><a href="javascript:void(0)">Service</a></li>
+                <li class="text-base text-secondary mt-[10px] hover:text-slate-400"><a href="javascript:void(0)">Our Story</a></li>
+                <li class="text-base text-secondary mt-[10px] hover:text-slate-400"><a href="javascript:void(0)">Success</a></li>
+                <li class="text-base text-secondary mt-[10px] hover:text-slate-400"><a href="javascript:void(0)">Support</a></li>
               </ul>
             </div>
           </div>
@@ -741,10 +771,10 @@
             <div class="mb-11">
               <div class="text-lg text-primary font-bold mb-8">Service</div>
               <ul class="list-none">
-                <li class="text-base text-secondary mt-[10px]"><a href="javascript:void(0)">Development</a></li>
-                <li class="text-base text-secondary mt-[10px]"><a href="javascript:void(0)">Maintanance</a></li>
-                <li class="text-base text-secondary mt-[10px]"><a href="javascript:void(0)">Consultancy</a></li>
-                <li class="text-base text-secondary mt-[10px]"><a href="javascript:void(0)">Design</a></li>
+                <li class="text-base text-secondary mt-[10px] hover:text-slate-400"><a href="javascript:void(0)">Development</a></li>
+                <li class="text-base text-secondary mt-[10px] hover:text-slate-400"><a href="javascript:void(0)">Maintanance</a></li>
+                <li class="text-base text-secondary mt-[10px] hover:text-slate-400"><a href="javascript:void(0)">Consultancy</a></li>
+                <li class="text-base text-secondary mt-[10px] hover:text-slate-400"><a href="javascript:void(0)">Design</a></li>
               </ul>
             </div>
           </div>

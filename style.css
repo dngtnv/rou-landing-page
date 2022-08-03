@@ -15,6 +15,12 @@
   .image-shape-left {
     clip-path: polygon(20% 0, 100% 0, 100% 100%, 0% 100%);
   }
+  .indicator-active {
+    @apply w-6 rounded;
+  }
+  .indicator {
+    @apply w-[9.6px] rounded-[50%];
+  }
   .perspective-e13 {
     perspective: 132px;
     perspective-origin: 24% 100%;
