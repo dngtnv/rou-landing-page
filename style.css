@@ -16,10 +16,10 @@
     clip-path: polygon(20% 0, 100% 0, 100% 100%, 0% 100%);
   }
   .indicator-active {
-    @apply w-6 rounded;
+    @apply w-8 md:w-6 rounded-md md:rounded;
   }
   .indicator {
-    @apply w-[9.6px] rounded-[50%];
+    @apply w-3 md:w-[9.6px] rounded-[50%];
   }
   .perspective-e13 {
     perspective: 132px;

@@ -14,11 +14,9 @@ for (var i = 0; i < slideList.children.length; i++) {
 const handleSlideShow = function (index, dot) {
   indicatorDot.forEach(el => el.classList.add('indicator'))
   slideArr.forEach(el => {
-    el.classList.remove('list-item')
-    el.classList.add('hidden')
+    el.style.display = 'none'
   })
-  slideArr[index].classList.remove('hidden')
-  slideArr[index].classList.add('list-item')
+  slideArr[index].style.display = 'list-item'
   dot.classList.remove('indicator')
   dot.classList.add('indicator-active')
 }
